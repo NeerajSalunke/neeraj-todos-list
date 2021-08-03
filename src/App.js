@@ -12,9 +12,12 @@ function App() {
     setTodos(todos.filter((e)=>{
       return e!==todo;
     }));
+    /*learn more about filter:- https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/filter */
+    /*learn more about filter:- https://www.w3schools.com/jsref/jsref_filter.asp */
   }  
 
-  const [todos, setTodos] = useState([
+
+  const [todos, setTodos] = useState([ /* setTodos is a function which will set the value of todos */
     { /* first task */
       sno:1,
       title:"Buy Apples",
