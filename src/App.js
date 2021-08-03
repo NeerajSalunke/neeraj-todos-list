@@ -6,12 +6,13 @@ import Footer from "./MyComponents/Footer"
 import React, { useState } from 'react';
 
 function App() {
-
   const onDelete = (todo) => {
     console.log("I called todo:",todo);
-  }
 
-  
+    setTodos(todos.filter((e)=>{
+      return e!==todo;
+    }));
+  }  
 
   const [todos, setTodos] = useState([
     { /* first task */
@@ -30,6 +31,9 @@ function App() {
       desc:"Go to medical"
     }
   ]);
+
+  
+
   return (
     <> {/* write anything in App.js inside a tag. Here we used <></> */}
         <Header title="My Todos List" searchBar={true}/> {/* here we are passing title to Header.js */} {/* Also,we set searchBar as a boolean variable */}
