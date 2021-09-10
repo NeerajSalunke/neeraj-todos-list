@@ -1,0 +1,22 @@
+{
+  "files": {
+    "main.css": "/neeraj-todos-list/static/css/main.5d2f674f.chunk.css",
+    "main.js": "/neeraj-todos-list/static/js/main.a116a195.chunk.js",
+    "main.js.map": "/neeraj-todos-list/static/js/main.a116a195.chunk.js.map",
+    "runtime-main.js": "/neeraj-todos-list/static/js/runtime-main.a5156a89.js",
+    "runtime-main.js.map": "/neeraj-todos-list/static/js/runtime-main.a5156a89.js.map",
+    "static/js/2.2a355d1d.chunk.js": "/neeraj-todos-list/static/js/2.2a355d1d.chunk.js",
+    "static/js/2.2a355d1d.chunk.js.map": "/neeraj-todos-list/static/js/2.2a355d1d.chunk.js.map",
+    "static/js/3.894e8b76.chunk.js": "/neeraj-todos-list/static/js/3.894e8b76.chunk.js",
+    "static/js/3.894e8b76.chunk.js.map": "/neeraj-todos-list/static/js/3.894e8b76.chunk.js.map",
+    "index.html": "/neeraj-todos-list/index.html",
+    "static/css/main.5d2f674f.chunk.css.map": "/neeraj-todos-list/static/css/main.5d2f674f.chunk.css.map",
+    "static/js/2.2a355d1d.chunk.js.LICENSE.txt": "/neeraj-todos-list/static/js/2.2a355d1d.chunk.js.LICENSE.txt"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.a5156a89.js",
+    "static/js/2.2a355d1d.chunk.js",
+    "static/css/main.5d2f674f.chunk.css",
+    "static/js/main.a116a195.chunk.js"
+  ]
+}
