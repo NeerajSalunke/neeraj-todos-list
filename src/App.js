@@ -51,7 +51,7 @@ function App() {
 
   return (
     <> {/* write anything in App.js inside a tag. Here we used <></> */}
-      <Router> {/* Header and Footer have to be displayed every time. AddTodo and Todos are to be displayed when endpoint is / */}
+      <Router basename={process.env.PUBLIC_URL}> {/* Header and Footer have to be displayed every time. AddTodo and Todos are to be displayed when endpoint is / */}
         <Header title="Neeraj's Todos List" searchBar={true} /> {/* here we are passing title to Header.js */} {/* Also,we set searchBar as a boolean variable */}
         <Switch> {/* this switch code is copied from website:- https://reactrouter.com/web/guides/quick-start*/}
           {/* later i did some changes in this switch */}
