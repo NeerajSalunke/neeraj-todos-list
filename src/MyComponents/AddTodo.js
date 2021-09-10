@@ -8,7 +8,7 @@ function AddTodo(props) {
 
     const submit = (e) => {
         e.preventDefault(); /* page wont reload */
-        if(title.length==0 || desc.length==0)
+        if(title.length===0 || desc.length===0)
         {
             alert("Please give Title and Description");
         }
