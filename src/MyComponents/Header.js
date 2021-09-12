@@ -23,7 +23,8 @@ function Header(props) { /* We want data from App.js, so use props. */
                     </ul>
                     { props.searchBar? <form className="d-flex">
                         <input className="form-control me-2" type="search" placeholder="Search" aria-label="Search" />
-                        <button className="btn btn-outline-success" type="submit">Search</button>
+                        {/* <button className="btn btn-outline-success" type="submit">Search</button> */}
+                        <Link className="nav-link" to="/search">Search</Link>
                     </form> : ""} {/* if searchBar is set to true, then show form(i.e. anything written before :),or if its false then the content to show is written after : */}
                 </div>
             </div>

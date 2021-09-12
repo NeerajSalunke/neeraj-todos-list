@@ -73,6 +73,14 @@ function App() {
           }}>
 
           </Route>
+          <Route exact path="/search" render={() => {
+            return(
+              <>
+                
+              </>
+            )
+          }}>
+          </Route>
         </Switch>
 
         <Footer />

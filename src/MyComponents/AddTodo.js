@@ -21,8 +21,13 @@ function AddTodo(props) {
            
     }
 
+    let AddTodoStyle = {
+        textAlign:"center",
+        width:"40%"
+    }
+
     return (
-        <div className="container">
+        <div className="container" style={AddTodoStyle}>
             <h4>Add Todo</h4>
             <form onSubmit={submit}>
                 <div className="mb-3">
