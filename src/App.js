@@ -5,6 +5,7 @@ import Todos from "./MyComponents/Todos"
 // import Todo from "./MyComponents/Todo"
 import Footer from "./MyComponents/Footer"
 import About from './MyComponents/About';
+import Search from './MyComponents/Search';
 import React, { useState, useEffect } from 'react';
 import { BrowserRouter as Router, Switch, Route} from "react-router-dom";
 
@@ -49,17 +50,19 @@ function App() {
     localStorage.setItem("todos", JSON.stringify(todos)); /* localStorage is a key-value pair. values are always string */
   }, [todos])
 
+  const[searchTerm,setSearchTerm]=useState("");
+
   return (
     <> {/* write anything in App.js inside a tag. Here we used <></> */}
       <Router basename={process.env.PUBLIC_URL}> {/* Header and Footer have to be displayed every time. AddTodo and Todos are to be displayed when endpoint is / */}
-        <Header title="Neeraj's Todos List" searchBar={true} /> {/* here we are passing title to Header.js */} {/* Also,we set searchBar as a boolean variable */}
+        <Header title="Neeraj's Todos List" setSearchTerm={setSearchTerm} searchBar={true} /> {/* here we are passing title to Header.js */} {/* Also,we set searchBar as a boolean variable */}
         <Switch> {/* this switch code is copied from website:- https://reactrouter.com/web/guides/quick-start*/}
           {/* later i did some changes in this switch */}
           <Route exact path="/" render={() => { /* i want to render AddTodo and Todos when endpoint is / */
             return (
               <>
                 <AddTodo add={addToTodos} />
-                <Todos todos={todos} onDelete={onDelete} /> {/* here we are passing todos object to Todos.js . todos object is written inside {} .  */}
+                <Todos todos={todos} onDelete={onDelete}/> {/* here we are passing todos object to Todos.js . todos object is written inside {} .  */}
               </>)
           }}>
 
@@ -76,7 +79,7 @@ function App() {
           <Route exact path="/search" render={() => {
             return(
               <>
-                
+                <Search todos={todos}  searchTerm={searchTerm}/>
               </>
             )
           }}>

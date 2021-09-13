@@ -1,7 +1,18 @@
-import React from 'react';
+import React , {useState} from 'react';
 import {Link} from "react-router-dom"; /* change all "href" to  "to". Similarly, change "a" to Link*/
                                         /* While using react router , we need to do above changes */
 function Header(props) { /* We want data from App.js, so use props. */
+
+    // const[searchTerm,setSearchTerm]=useState("");
+
+    const handleChange = (e) => {
+        props.setSearchTerm(e.target.value);
+    }
+
+    // console.log(searchTerm)
+
+    
+
     return (
         
         /*  following code is from bootstrap app  */
@@ -22,7 +33,7 @@ function Header(props) { /* We want data from App.js, so use props. */
 
                     </ul>
                     { props.searchBar? <form className="d-flex">
-                        <input className="form-control me-2" type="search" placeholder="Search" aria-label="Search" />
+                        <input className="form-control me-2" type="search" placeholder="Search Title" /* value={searchTerm} */ onChange={handleChange} aria-label="Search" />
                         {/* <button className="btn btn-outline-success" type="submit">Search</button> */}
                         <Link className="nav-link" to="/search">Search</Link>
                     </form> : ""} {/* if searchBar is set to true, then show form(i.e. anything written before :),or if its false then the content to show is written after : */}
